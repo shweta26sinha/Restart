@@ -1,0 +1,14 @@
+importmath
+
+defcheck_strong_number(num):
+orig_num=num
+sum=0
+whilenum%10!=0:
+sum+=math.factorial(num%10)
+num//=10
+print(sum,orig_num)
+iforig_num==sum:
+return'true'
+else:return'false'
+
+print(check_strong_number(145))
