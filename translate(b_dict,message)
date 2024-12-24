@@ -1,0 +1,15 @@
+def translate(b_dict,message):
+    trans=''
+    message=message.split(' ')
+    for i in message:
+        trans+=str(b_dict.get(i))+' '
+    return trans
+
+b_dict={"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"ar"}
+list_words="Merry Christmas"
+print(translate(b_dict,list_words))
+list_words="merry christmas"
+print(translate(b_dict,list_words))
+list_words="merry christmas and happy new year"
+print(translate(b_dict,list_words))
+
