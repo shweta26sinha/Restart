@@ -1,0 +1,14 @@
+def  encode(message) :
+    code=''
+    dict={}
+    for i in message:
+        if dict.get(i):
+            dict.update({i:int(dict.get(i))+1})
+        else: dict.update({i:1})
+    print(dict)
+    for key,val in dict.items():
+        code+=str(val)+key
+    return code
+
+message='AAAABBBBCCCCCCCC'
+print( encode(message) )
